@@ -20,7 +20,9 @@ const forecast = (latitude, longitude, callback) => {
                 icon: body.currently.icon,
                 windBearing: body.currently.windBearing,
                 windGust :  body.currently.windGust,
-                temperature : body.currently.temperature
+                temperature : body.currently.temperature,
+                hourly : body.hourly.summary,
+                hourly_time : body.hourly.data
             });   
         }
     })
