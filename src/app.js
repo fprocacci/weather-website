@@ -10,6 +10,7 @@ const forecast = require('./utils/forecast');
 //console.log(path.join(__dirname, '../public'));
 
 const app = express();
+const port = process.env.PORT  ||  3000;  // SET ON HEROKU
 
 // Define paths for Express config
 const publicDirectory = path.join(__dirname, '../public');
@@ -130,8 +131,8 @@ app.get('*', (req, res) => {
 
 
 // Starts up the server.
-app.listen(3000, ()=> {
-    console.log('Server Started');
+app.listen(port, ()=> {
+    console.log('Server Started on ' + port);
 });
 
 // app.com/help
